@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="text-center">
+        <h1 class="text-danger my-3">Admin Login</h1>
+    </div>
+    <div class="m-5 p-5">
+        <form [formGroup]="aLogin" (ngSubmit)="loginAdmin()">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Username</label>
+              <input type="email" name="ausername" formControlName="ausername" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" name="apassword" formControlName="apassword" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-success">Login</button>
+          </form>
+          <div class="text-center text-danger">
+            <h2 *ngIf="invalid">{{invalid}}</h2>
+          </div>
+    </div>
+    
+</div>

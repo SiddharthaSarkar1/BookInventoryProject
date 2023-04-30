@@ -1,0 +1,41 @@
+<app-uheader></app-uheader>
+
+<!-- <div class="container my-5">
+  <h4>Search for book : </h4>
+  <form class="form my-2">
+    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2" type="submit">Search</button>
+  </form>
+</div> -->
+
+<div class="container my-5 text-center text-capitalize">
+  <h1><u>Book List</u></h1>
+</div>
+
+<div class="container my-5">
+  <table class="table table-warning text-dark">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Author</th>
+        <th scope="col">Name</th>
+        <th scope="col">Number</th>
+        <th scope="col">Category</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="myrow_{{i}}" *ngFor="let bk of book; let i = index">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ bk.author }}</td>
+        <td>{{ bk.name }}</td>
+        <td>{{ bk.price }}</td>
+        <td>{{ bk.category }}</td>
+        <td><button class="btn btn-sm btn-warning btn-outline-danger" (click)="rateBook(bk.id)">Rate this book</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-ufooter></app-ufooter>

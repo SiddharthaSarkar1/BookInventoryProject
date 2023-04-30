@@ -1,0 +1,18 @@
+<app-uheader></app-uheader>
+
+  <div class="container">
+    <div class="jumbotron my-5">
+        <h1 class="display-4 text-primary text-center">User Profile</h1><hr>
+        <div class="text-center my-3">
+            <h3 >Name : {{ sidData.firstname }} {{ sidData.lastname }}</h3>
+            <h3 >Email : {{ sidData.email }}</h3>
+            <h3 >Phone : {{ sidData.phone }}</h3>
+            <h3 >Address : {{ sidData.address }}</h3>
+            <br>
+            <button class="btn btn-primary btn-lg" (click)="edituprof(sidData.id)">Update Profile</button>
+        </div>
+
+      </div>
+  </div>
+
+  <app-ufooter></app-ufooter>

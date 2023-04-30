@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="text-center">
+        <h1 class="text-warning my-3">Update Profile</h1>
+    </div>
+    <div class="m-5 p-5">
+        <form [formGroup]="updateUser" (ngSubmit)="updateUserProf(updateUser.value, sidData.id)">
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email id </label>
+                <input type="text" [readonly]="true" name="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [ngModel]="sidData.email">
+            </div>
+
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">First Name</label>
+                    <input type="text" name="firstname" formControlName="firstname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [ngModel]="sidData.firstname">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Last Name</label>
+                    <input type="text" name="lastname" formControlName="lastname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [ngModel]="sidData.lastname">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Phone No</label>
+                    <input type="number" name="phone" formControlName="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [ngModel]="sidData.phone">
+                </div>
+            </div>
+
+            <input type="hidden" name="password" formControlName="password" [ngModel]="sidData.password">
+
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Address</label>
+                    <input type="text" name="address" formControlName="address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [ngModel]="sidData.address">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+</div>
